@@ -1,5 +1,5 @@
+# Two sum
 1 bruter force
-```
     vector<int> twoSum(vector<int>& nums, int target) {
        
         for(int i =0;i<nums.size();i++){
@@ -10,4 +10,29 @@
             }
         }
  }
-```
+2 hashmap
+通过数组的下标和数值形成hash map对  快速搜索下标 ，这里付出的代价是o(n)的空间复杂度
+   
+     vector<int> twosum(vector<int>& nums, int target){
+      unordered_map<int, int> sum;
+      for(int i =0, i < nums.size();i++){
+          if(sum.find(target-nums[i])!=sum.end())
+                 return vector<int> {i, sum[target-nums[j]'};
+       sum[nums[i]]=i;
+       
+      }
+# Two sum II 有序数组的排列  
+
+1 两个指针的方法 头尾逼近 
+
+头指针和尾指针  对有序数组十分有利
+
+1 有序的查找 
+二分查找时间复杂度为o(logn)
+n次外部查找 ，总的时间复杂度为o(nlogn)
+
+
+# Add Two Numbers
+考察链表的遍历以及数学运算的分析，dummyhead
+
+# Valid Palindrome 回文字母 string的一些函数 isalnum（） isalpha（）toupper（） tolower（） isspqce()等等 两个指针
